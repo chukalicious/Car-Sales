@@ -5,8 +5,8 @@ const AdditionalFeature = (props) => {
   const [feature, setFeature] = useState({
     name: props.feature.name,
     price: props.feature.price,
+    id: props.feature.id,
   });
-  console.log("feature: ", feature);
 
   return (
     <li>
