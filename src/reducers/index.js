@@ -21,7 +21,10 @@ export const carReducer = (state = initialState, action) => {
     case ADD_FEATURE:
       return {
         ...state,
-        car: { ...state.car, features: [...state.features] },
+        car: {
+          ...state.car,
+          features: [...state.car.features, action.payload],
+        },
       };
     default:
       return state;

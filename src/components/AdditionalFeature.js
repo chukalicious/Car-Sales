@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 // import { connect } from "react-redux";
 
 const AdditionalFeature = (props) => {
-  console.log("props in the additionalFeature component: ", props);
+  const [feature, setFeature] = useState({
+    name: props.feature.name,
+    price: props.feature.price,
+  });
+  console.log("feature: ", feature);
+
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
-      <button className="button" onClick={() => {}}>
+      <button
+        className="button"
+        onClick={() => {
+          props.addFeature(feature);
+        }}
+      >
         Add
       </button>
       {props.feature.name} (+{props.feature.price})
