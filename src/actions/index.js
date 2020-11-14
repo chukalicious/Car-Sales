@@ -8,9 +8,10 @@ export const addFeature = (feature) => {
   };
 };
 
-export const removeFeature = (feature) => {
+export const removeFeature = (itemId) => {
+  console.log("itemId in reducer: ", itemId);
   return {
     type: REMOVE_FEATURE,
-    payload: feature,
+    payload: itemId,
   };
 };
