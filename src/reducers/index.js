@@ -34,8 +34,9 @@ export const carReducer = (state = initialState, action) => {
           features: state.car.features.filter(
             (feature) => feature.id !== action.payload.id
           ), //tim's recommendation
+          //useful note: the filter method CAN be the value of a key
         },
-        //spread the payload in the features array
+        //spread the payload in the features array - this would have been the long way around
         //the payload is an array
       };
     default:
